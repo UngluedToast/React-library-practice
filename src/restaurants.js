@@ -1,16 +1,5 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-// import restaurants from './restaurants'
-import displayTypes from './displayTypes'
-
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      restaurants : {
+    const restaurants = {
         "mediterranean": {
             "Mediterranean Grill": [
                 "hummus", "tabouli","dolmas"
@@ -43,30 +32,6 @@ class App extends React.Component {
             "Matador":[
                 "cheese dip", "cheese dip", "cheese dip"
             ]
-          }
         }
-      }
     }
-  render () {
-    console.log('rendering app, this is a sanity check bud :)')
-    console.log(Object.keys(this.state.restaurants['mexican']));
-
-
-    return (
-      <div className="App">
-        <header className="App-header">
-          <ul>
-            {
-              Object.keys(this.state.restaurants).map((restaurant) => (
-                <li>{restaurant}</li>
-              ))
-            }
-          </ul>
-        </header>
-      </div>
-    );
-    
-  }
-}
-
-export default App;
+export default restaurants 
