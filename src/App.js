@@ -62,6 +62,12 @@ class App extends React.Component {
               ))
             }
           </ul>
+          <ul>
+            {Object.keys(this.state.restaurants['mexican']).map((restaurant) => (
+              <li>{restaurant}</li>
+            ))
+            }
+          </ul>
         </header>
       </div>
     );
